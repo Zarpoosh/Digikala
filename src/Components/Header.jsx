@@ -11,10 +11,10 @@ import { MdOutlineDiscount } from "react-icons/md";
 import { CiDiscount1 } from "react-icons/ci";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import { GrFormClose } from "react-icons/gr";
 import { BsQuestionCircle } from "react-icons/bs";
 import { MdOutlineStorefront } from "react-icons/md";
 import Search from "./Search";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const [showSide, setShowSide] = useState(false);
@@ -42,15 +42,7 @@ const Header = () => {
               tabindex="-1"
               aria-labelledby="drawer-navigation-label"
             >
-              <div className="border-b justify-between flex pb-4 lg:hidden">
-                <div className="flex">
-                <img className="h-6" src={digi} alt="" />
-                </div>
-                <i onClick={() => setShowSide(!showSide)}
-                  className=" flex mr-auto items-center ">
-                  <GrFormClose className="h-7 w-7 gray-400"/>
-                </i>
-              </div>
+              
               <div class="py-4 lg:py-0">
                 <ul class="space-y-2 flex flex-col lg:flex-row">
                   <li className=" py-5 hidden lg:inline">
@@ -118,16 +110,8 @@ const Header = () => {
 
             {/* gps */}
             <div>
-              <button
-                onClick={() => setShowSide(!showSide)}
-                class="rounded-lg px-5  mr-2 border-0 focus:border-0 lg:hidden"
-                type="button"
-                data-drawer-target="drawer-navigation"
-                data-drawer-show="drawer-navigation"
-                aria-controls="drawer-navigation"
-              >
-                <RxHamburgerMenu />
-              </button>
+              
+              <Sidebar/>
               
             </div>
             <div className="flex justify-between mr-auto">
