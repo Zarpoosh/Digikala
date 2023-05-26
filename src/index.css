@@ -1,0 +1,16 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+i{
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: vazir;
+    src: url(../src//fonts/Vazir.ttf) format("truetype");
+}
+*{
+    font-family: vazir;
+}
