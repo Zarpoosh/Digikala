@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 // images
-import digi from "../image/digi.svg";
 import banner from "../image/banner.webp"
 // icons
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -21,7 +20,7 @@ const Header = () => {
   return (
     <>
     {/* banner */}
-      <div className="w-full">
+      <div className="w-full cursor-pointer">
         <img src={banner} alt="" />
       </div>
       {/* end of banner */}

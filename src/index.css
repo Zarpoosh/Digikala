@@ -14,3 +14,17 @@ i{
 *{
     font-family: vazir;
 }
+/* sidebar */
+#sidebar{
+    animation:right 0.5s ease-in-out ;
+}
+@keyframes right {
+    0% {
+      margin-right: -300px;
+    }
+    100% {
+      margin-right: 0;
+    }
+  }
+  
+/* end of sidebar */

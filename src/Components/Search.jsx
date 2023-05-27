@@ -15,7 +15,7 @@ const Search = () => {
             <div className="w-full flex relative justify-between">
               <div className="flex flex-1 items-center">
                 {/* logo */}
-                <a className='' href="">
+                <a className='' href="#">
                   <img src={logo} alt="" />
                 </a>
                 {/* end of logo */}
