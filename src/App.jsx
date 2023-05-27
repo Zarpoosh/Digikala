@@ -1,7 +1,9 @@
 import "./App.css";
+import AutoSlider from "./Components/AutoSlider";
 import Circles from "./Components/Circles";
 import Header from "./Components/Header";
 import Slider from "./Components/Slider";
+import SuperMarket from "./Components/SuperMarket";
 import Support from "./Components/Support";
 
 function App() {
@@ -19,17 +21,25 @@ function App() {
         </div>
 
         {/* circles */}
-        <div className="lg:my-56 ">
-          <Circles />
-         
+        <div className="lg:mt-[200px]">
+          <Circles />         
         </div>
 
         {/* support */}
-        <div>
+        <div style={{ zIndex: "1" }}>
           <Support />
         </div>
 
-        {/* scroller */}
+        {/* carousel */}
+        <div>
+          <AutoSlider/>
+        </div>
+
+        {/* supermarket */}
+        <div>
+          {/* <SuperMarket/> */}
+        </div>
+       
       </div>
     </>
   );

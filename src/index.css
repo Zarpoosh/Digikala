@@ -28,3 +28,8 @@ i{
   }
   
 /* end of sidebar */
+/* carousel */
+::-webkit-scrollbar{
+  display: none;
+}
+/* end of carousel */

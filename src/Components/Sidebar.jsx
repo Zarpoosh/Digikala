@@ -48,7 +48,7 @@ const Sidebar = () => {
               onClick={() => setShowSide(!showSide)}
               className=" flex mr-auto items-center "
             >
-              <GrClose className="h-5 w-5 text-gray-400" />
+              <GrClose className="h-5 w-5 ml-3 text-gray-400" />
             </i>
           </div>
           {/* end of logo */}
