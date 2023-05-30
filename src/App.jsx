@@ -5,6 +5,8 @@ import Header from "./Components/Header";
 import Slider from "./Components/Slider";
 import SuperMarket from "./Components/SuperMarket";
 import Support from "./Components/Support";
+import Off from "./Components/Off";
+import Category from "./Components/Category";
 
 function App() {
   return (
@@ -37,8 +39,20 @@ function App() {
 
         {/* supermarket */}
         <div>
-          {/* <SuperMarket/> */}
+          <SuperMarket/>
         </div>
+
+        {/* off */}
+        <div>
+          <Off/>
+        </div>
+
+        {/* category */}
+        <div>
+          <Category/>
+        </div>
+        
+        {/*  */}
        
       </div>
     </>
