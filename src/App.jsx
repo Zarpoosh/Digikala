@@ -2,11 +2,18 @@ import "./App.css";
 import AutoSlider from "./Components/AutoSlider";
 import Circles from "./Components/Circles";
 import Header from "./Components/Header";
-import Slider from "./Components/Slider";
+import Selected from "./Components/Selected/Selected.jsx";
+import Slider from "./Components/Slider1/Slider";
 import SuperMarket from "./Components/SuperMarket";
-import Support from "./Components/Support";
+import Support from "./Components/support/Support";
 import Off from "./Components/Off";
 import Category from "./Components/Category";
+import Suggest from "./Components/Slider2/Suggest";
+import Brand from "./Components/Popular/Brand";
+import Product from "./Components/Products/Product";
+import Plus from "./Components/Digiplus/Plus";
+import Club from "./Components/DigiClub/Club";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -24,7 +31,7 @@ function App() {
 
         {/* circles */}
         <div className="lg:mt-[200px]">
-          <Circles />         
+          <Circles />
         </div>
 
         {/* support */}
@@ -34,26 +41,56 @@ function App() {
 
         {/* carousel */}
         <div>
-          <AutoSlider/>
+          <AutoSlider />
         </div>
 
         {/* supermarket */}
         <div>
-          <SuperMarket/>
+          <SuperMarket />
         </div>
 
         {/* off */}
         <div>
-          <Off/>
+          <Off />
         </div>
 
         {/* category */}
         <div>
-          <Category/>
+          <Category />
         </div>
-        
-        {/*  */}
-       
+
+        {/* suggest */}
+        <div>
+          <Suggest />
+        </div>
+
+        {/* Popular brands */}
+        <div>
+          <Brand/>
+        </div>
+
+        {/* content */}
+        <div>
+          <Product/>
+        </div>
+
+        {/* digiplus */}
+        <div>
+          <Plus/>
+        </div>
+        {/* digiclub */}
+        <div>
+          <Club/>
+        </div>
+
+        {/* selected */}
+        <div>
+          <Selected/>
+        </div>
+        {/* footer */}
+        <div>
+          <Footer/>
+        </div>
       </div>
     </>
   );

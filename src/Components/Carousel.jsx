@@ -14,6 +14,7 @@ const Carousel = () => {
     document.getElementById("content").scrollLeft += 400;
   };
 
+  
   return (
     <div className="relative">
       {/* amazing */}

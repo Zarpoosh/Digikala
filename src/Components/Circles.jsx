@@ -11,6 +11,7 @@ import mounth from "../image/icons/mounth.png";
 import pluss from "../image/icons/pluss.png";
 import CircleRows from "./CircleRows";
 
+
 const Circles = () => {
 
   return (

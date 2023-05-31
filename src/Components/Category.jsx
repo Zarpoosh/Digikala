@@ -16,17 +16,16 @@ import watch from "../image/category/watch.webp";
 const Category = () => {
   return (
     <>
+      <div className=" flex items-center justify-center my-4">
+        <h1 className="font-bold">دسته بندی های دیجی کالا</h1>
+      </div>
       <div className="w-full h- lg:w-4/5 lg:mx-auto grid grid-cols-3 lg:grid-cols-6  items-center justify-center">
         <div className="items-center my-2 p-3 flex flex-col">
           <a
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col "
             href="#"
           >
-            <img
-              className="items-center"
-              src={phone}
-              alt=""
-            />
+            <img className="items-center" src={phone} alt="" />
           </a>
           <p className="text-xs">موبایل</p>
         </div>
@@ -48,11 +47,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={pat}
-              alt=""
-            />
+            <img className="" src={pat} alt="" />
           </a>
           <p className="text-xs">خانه و آشپزخانه</p>
         </div>
@@ -61,11 +56,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={bag}
-              alt=""
-            />
+            <img className="" src={bag} alt="" />
           </a>
           <p className="text-xs">مد و پوشاک</p>
         </div>
@@ -74,11 +65,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={food}
-              alt=""
-            />
+            <img className="" src={food} alt="" />
           </a>
           <p className="text-xs">کالاهای سوپرمارکتی</p>
         </div>
@@ -87,11 +74,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={book}
-              alt=""
-            />
+            <img className="" src={book} alt="" />
           </a>
           <p className="text-xs">کتاب لوازم و التحریر و هنر</p>
         </div>
@@ -100,11 +83,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={dol}
-              alt=""
-            />
+            <img className="" src={dol} alt="" />
           </a>
           <p className="text-xs">اسباب بازی کودک و نوزاد</p>
         </div>
@@ -113,11 +92,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={perfum}
-              alt=""
-            />
+            <img className="" src={perfum} alt="" />
           </a>
           <p className="text-xs">زیبایی و سلامت</p>
         </div>
@@ -126,11 +101,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={racket}
-              alt=""
-            />
+            <img className="" src={racket} alt="" />
           </a>
           <p className="text-xs">ورزش و سفر</p>
         </div>
@@ -139,11 +110,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={plirs}
-              alt=""
-            />
+            <img className="" src={plirs} alt="" />
           </a>
           <p className="text-xs">ابزار لوازم ساختمانی و صنعتی</p>
         </div>
@@ -152,11 +119,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={car}
-              alt=""
-            />
+            <img className="" src={car} alt="" />
           </a>
           <p className="text-xs">خودرو موتورسیکلت</p>
         </div>
@@ -165,11 +128,7 @@ const Category = () => {
             className=" h-20 w-20 lg:w-40 lg:h-40 items-center flex flex-col"
             href="#"
           >
-            <img
-              className=""
-              src={shoes}
-              alt=""
-            />
+            <img className="" src={shoes} alt="" />
           </a>
           <p className="text-xs">محصولات بومی و محلی</p>
         </div>
