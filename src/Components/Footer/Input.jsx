@@ -19,37 +19,6 @@ const Input = () => {
   });
   return (
     <>
-   
-        
-      {/* icons */}
-      {/* <div className="flex flex-row justify-between p-3">
-        <div className="flex">
-          <p>همراه ما باشید!</p>
-        </div>
-        <div className="flex text-gray-500">
-          <a className="mx-2" href="#">
-            <i>
-              <BsInstagram className="h-6 w-6" />
-            </i>
-          </a>
-          <a className="mx-2" href="#">
-            <i>
-              <BsTwitter className="h-6 w-6" />
-            </i>
-          </a>
-          <a className="mx-2" href="#">
-            <i>
-              <BsLinkedin className="h-6 w-6" />
-            </i>
-          </a>
-          <a className="mx-2" href="#">
-            <i>
-              <BsYoutube className="h-6 w-6" />
-            </i>
-          </a>
-        </div>
-      </div> */}
-      {/* end of icons */}
       <form className="w-full flex-row  flex my-2">
         <input
           value={Input}

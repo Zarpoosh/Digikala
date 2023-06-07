@@ -4,26 +4,71 @@ import MoreDown from "./MoreDown";
 import MoreRows from "./MoreRows";
 // image
 import smile from "../image/icons/smile.png";
-import box from "../image/icons/box.png"
-import mounth from "../image/icons/mounth.png"
-import pluss from "../image/icons/pluss.png"
-import mamor from "../image/icons/mamoreat.png"
-import clab from "../image/icons/clab.png"
-import gift from "../image/icons/gift.png"
-import style from "../image/icons/style.png"
-import gest from "../image/icons//gest.png"
-import servis from "../image/icons/servis.png"
-import major from "../image/icons/Major.png"
-import pindo from "../image/icons/pindo.png"
-import fidbo from "../image/icons/fidbo.png"
-import jet from "../image/icons/jet.png"
-import mehr from "../image/icons/mehr.png"
-import traditional from "../image/icons/traditional.png"
-
-
+import box from "../image/icons/box.png";
+import mounth from "../image/icons/mounth.png";
+import pluss from "../image/icons/pluss.png";
+import mamor from "../image/icons/mamoreat.png";
+import clab from "../image/icons/clab.png";
+import gift from "../image/icons/gift.png";
 
 const More = () => {
+  const imagecards = [
+    {
+      title: "دیجی کالا جت",
+      desc: "خرید فوری از سوپرمارکت های اطراف",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/d0dc31c892be8cf1408e4e14580b3f479da66bd1_1648897133.png",
+    },
+    {
+      title: "حراج استایل",
+      desc: "فروشگاه آنلاین مد  پوشاک",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/625d8883f37944f3f0c4af5fe39435600931ab22_1664309850.png",
+    },
+    {
+      title: "خرید قسطی",
+      desc: "خرید قسطی گوشی موبایل لپ تاب و لوازم خانگی",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/ac127167132653d14c758748b07824a6a7643a31_1663444619.png",
+    },
+    {
+      title: "خرید عمده و سازمانی",
+      desc: "خرید عمده و سازمانی انواع کالا",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/555ad3336a60bbd1433dd7a999f4d487e96602d8_1680678388.png",
+    },
+    {
+      title: "دیجی کالا سرویس",
+      desc: "گارانتی و خدمات پس از فروش دیجی کالا",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/6c69096a524add2d4646cd162dfa5f66d4ddceac_1668952039.png",
+    },
+    {
+      title: "پیندو",
+      desc: "ثبت آگهی برای کالا و خدمات",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/934a12850c05efdec1969aff883d107cc600a7b3_1648896993.png",
+    },
+    {
+      title: "فیدبو",
+      desc: "خرید کتاب و دانلود کتاب الکترونیک",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/3e870ff8c78bd76061a920c29e346027809817f8_1648896950.png",
+    },
+    {
+      title: "دیجی کالا مهر",
+      desc: "به مسیر تازه مهربانی بیا",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/17bb6daa07ae2ec11867fb7320ed6f79b26f1f4b_1666724993.png",
+    },
+    {
+      title: "بومی و محلی",
+      desc: "عرضه محصولات محلی و دست ساز",
+      url: "https://dkstatics-public.digikala.com/digikala-bellatrix/b9f37d8283afd3a309e30756a38c3f879453262a_1668942073.png",
+    },
+  ];
   const [showMore, setShowMore] = useState(false);
+
+  const [cards, setCards] = useState([]);
+  const shuffledCards = () => {
+    const shuffledCards = [...imagecards, ...imagecards].map((card) => ({
+      ...card,
+      id: Math.random(),
+    }));
+    setCards(shuffledCards);
+  };
   return (
     <div className="">
       {/* modal */}
@@ -45,12 +90,12 @@ const More = () => {
         }`}
       >
         <div className="relative w-full max-w-2xl max-h-full mx-auto top-32">
-          <div className=" relative bg-white rounded-lg shadow ">
+          <div id="more" className=" relative bg-red-200 rounded-lg shadow ">
             <div className="flex items-start p-4 border-b ">
-                <img src={smile} className="ml-1" alt="" />
-                <div className="felx w-full items-center">
-                  <p className="">خدمات دیجی کالا</p>
-                </div>
+              <img src={smile} className="ml-1" alt="" />
+              <div className="felx w-full items-center">
+                <p className="">خدمات دیجی کالا</p>
+              </div>
               <button
                 onClick={() => setShowMore(!showMore)}
                 type="button"
@@ -74,12 +119,12 @@ const More = () => {
             </div>
 
             <div className="w-full lg:w-4/5  px-2 grid grid-cols-3 lg:flex lg:mx-auto lg:justify-between">
-              <MoreRows Image={box} title="لاکی باکس"/>
-              <MoreRows Image={mounth} title="خرید سر ماه"/>
-              <MoreRows Image={pluss} title="دیجی پلاس"/>
-              <MoreRows Image={mamor} title="ماموریت ها"/>
-              <MoreRows Image={clab} title="دیجی کلاب"/>
-              <MoreRows Image={gift} title="کارت هدیه"/>
+              <MoreRows Image={box} title="لاکی باکس" />
+              <MoreRows Image={mounth} title="خرید سر ماه" />
+              <MoreRows Image={pluss} title="دیجی پلاس" />
+              <MoreRows Image={mamor} title="ماموریت ها" />
+              <MoreRows Image={clab} title="دیجی کلاب" />
+              <MoreRows Image={gift} title="کارت هدیه" />
             </div>
 
             <div className="flex p-6 border-t  rounded-b flex-col">
@@ -87,16 +132,14 @@ const More = () => {
                 <p className="text-xs mr-5">سرویس های گروه دیجی کالا</p>
               </div>
               <div className=" w-full lg:w-full lg:grid grid-cols-2 lg:mx-auto lg:justify-between">
-
-              <MoreDown Image={jet} desc="خرید فوری از سوپرمارکت های اطراف" title="دیجی کالا جت"/>
-              <MoreDown Image={style} desc="فروشگاه آنلاین مد  پوشاک" title="دیجی کالا جت"/>
-              <MoreDown Image={gest} desc="خرید قسطی گوشی موبایل لپ تاب و لوازم خانگی" title="دیجی کالا جت"/>
-              <MoreDown Image={servis} desc="گارانتی و خدمات پس از فروش دیجی کالا " title="دیجی کالا جت"/>
-              <MoreDown Image={major} desc="خرید عمده و سازمانی انواع کالا" title="دیجی کالا جت"/>
-              <MoreDown Image={pindo} desc="ثبت آگهی برای کالا و خدمات" title="دیجی کالا جت"/>
-              <MoreDown Image={fidbo} desc="خرید کتاب و دانلود کتاب الکترونیک" title="دیجی کالا جت"/>
-              <MoreDown Image={mehr} desc="به مسیر تازه مهربانی بیا" title="دیجی کالا مهر" />
-              <MoreDown Image={traditional} desc="عرضه محصولات محلی و دست ساز" title="بومی و محلی"/>
+                {imagecards.map((cards) => (
+                  <MoreDown
+                    Image={cards.url}
+                    key={cards.id}
+                    desc={cards.desc}
+                    title={cards.title}
+                  />
+                ))}
               </div>
             </div>
           </div>

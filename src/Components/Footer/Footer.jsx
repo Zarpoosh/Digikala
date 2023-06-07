@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "./Input";
 import { MdOutlineKeyboardArrowUp } from "react-icons/md";
-// icons
 // icons
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
 import { BsLinkedin } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
+import Install from "./Install";
+
 const Footer = () => {
+  const imagecards = [
+    { url: "https://www.digikala.com/statics/img/svg/footer/digimag.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/digipay.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/digistyle.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/digiplus.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/digiclub.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/jet.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/magnet.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/digiMehr.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/fidibo.svg" },
+    { url: "https://www.digikala.com/statics/img/svg/footer/pindo.svg" },
+    {url: "https://www.digikala.com/statics/img/svg/footer/digikala-service.svg",},
+    { url: "https://www.digikala.com/statics/img/svg/footer/smartech.svg" },
+  ];
+  const [cards, setCards] = useState([]);
+  const shuffelcards = () => {
+    const shuffeledcards = [...imagecards, ...imagecards].map((card) => ({
+      ...card,
+      id: Math.random(),
+    }));
+    setCards(shuffeledcards);
+  };
   return (
     <>
       <footer className="flex flex-col p-2">
@@ -149,46 +172,7 @@ const Footer = () => {
         {/* end of input */}
 
         {/* install */}
-        <div className="flex flex-col my-4 lg:flex-row bg-blue-900 rounded-lg">
-          <div className="mx-auto items-center my-2 flex flex-row">
-            <a href="#">
-              <img
-                className="h-9 w-9"
-                src="https://www.digikala.com/statics/img/png/footerlogo2.png"
-                alt=""
-              />
-            </a>
-            <p className="text-white mx-2 font-bold">
-              دانلود اپلیکیشن دیجی‌کالا
-            </p>
-          </div>
-          <div className="grid grid-cols-2 lg:grid-cols-4  mx-auto">
-            <a className="mx-2 my-2" href="#">
-              <img
-                src="https://www.digikala.com/statics/img/svg/appStores/google-play.svg"
-                alt=""
-              />
-            </a>
-            <a className="mx-2 my-2" href="#">
-              <img
-                src="https://www.digikala.com/statics/img/svg/appStores/coffe-bazzar.svg"
-                alt=""
-              />
-            </a>
-            <a className="mx-2 my-2" href="#">
-              <img
-                src="https://www.digikala.com/statics/img/svg/appStores/myket.svg"
-                alt=""
-              />
-            </a>
-            <a className="mx-2 my-2" href="#">
-              <img
-                src="https://www.digikala.com/statics/img/svg/appStores/sib-app.svg"
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
+        <Install/>
         {/*end of install */}
 
         {/* etemad */}
@@ -231,78 +215,11 @@ const Footer = () => {
             (فروشگاه آنلاین دیجی‌کالا) است.
           </p>
           <div className="grid grid-cols-3 lg:grid-cols-6 items-center">
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/digimag.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/digipay.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/digistyle.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/digiplus.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/digiclub.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/jet.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/magnet.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/digiMehr.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/fidibo.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/pindo.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/digikala-service.svg"
-                alt=""
-              />
-            </a>
-            <a href="#" className="mx-auto p-3">
-              <img
-                src="https://www.digikala.com/statics/img/svg/footer/smartech.svg"
-                alt=""
-              />
-            </a>
+            {imagecards.map((cards) => (
+              <a key={cards.id} href="#" className="mx-auto p-3">
+                <img src={cards.url} alt="" />
+              </a>
+            ))}
           </div>
         </div>
         {/*end of  end */}

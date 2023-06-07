@@ -28,6 +28,18 @@ i{
   }
   
 /* end of sidebar */
+
+/* #more{
+  animation:bottom 0.5s ease-in-out ;
+}
+@keyframes bottom {
+  0% {
+    margin-bottom: 500px;
+  }
+  100% {
+    margin-bottom: 300;
+  }
+} */
 /* carousel */
 ::-webkit-scrollbar{
   display: none;
