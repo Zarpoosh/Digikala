@@ -90,7 +90,7 @@ const More = () => {
         }`}
       >
         <div className="relative w-full max-w-2xl max-h-full mx-auto top-32">
-          <div id="more" className=" relative bg-red-200 rounded-lg shadow ">
+          <div id="more" className=" relative bg-white rounded-lg shadow ">
             <div className="flex items-start p-4 border-b ">
               <img src={smile} className="ml-1" alt="" />
               <div className="felx w-full items-center">

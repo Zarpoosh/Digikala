@@ -21,7 +21,7 @@ function App() {
       <div className="flex flex-col w-full ">
         {/* header */}
         <div className=" border-b fixed bg-white" style={{ zIndex: "1" }}>
-          <Header className="" />
+          <Header />
         </div>
 
         {/* slider */}
@@ -66,30 +66,30 @@ function App() {
 
         {/* Popular brands */}
         <div>
-          <Brand/>
+          <Brand />
         </div>
 
         {/* content */}
         <div>
-          <Product/>
+          <Product />
         </div>
 
         {/* digiplus */}
         <div>
-          <Plus/>
+          <Plus />
         </div>
         {/* digiclub */}
         <div>
-          <Club/>
+          <Club />
         </div>
 
         {/* selected */}
         <div>
-          <Selected/>
+          <Selected />
         </div>
         {/* footer */}
         <div>
-          <Footer/>
+          <Footer />
         </div>
       </div>
     </>

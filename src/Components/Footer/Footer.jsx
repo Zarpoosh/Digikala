@@ -8,6 +8,9 @@ import { BsLinkedin } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import Install from "./Install";
 
+import { Outlet, Link } from "react-router-dom";
+
+
 const Footer = () => {
   const imagecards = [
     { url: "https://www.digikala.com/statics/img/svg/footer/digimag.svg" },
@@ -46,12 +49,15 @@ const Footer = () => {
             </a>
           </div>
 
+           
+
           <button className="p-1 border-gray-400 border rounded-lg text-gray-500 flex flex-row items-center">
             بازگشت به بالا
             <i className="">
               <MdOutlineKeyboardArrowUp className="h-5 w-5" />
             </i>
           </button>
+            
         </div>
         {/* end of button & brand */}
         <div className="text-xs flex flex-col p-2 mx-1">

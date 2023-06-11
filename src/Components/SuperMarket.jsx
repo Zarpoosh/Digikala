@@ -13,7 +13,7 @@ import fresh2 from "../image/commodity/fresh2.png"
 const SuperMarket = () => {
   return (
     <>
-    <div className="lg:w-4/5 lg:mx-auto mx-4 rounded-lg my-4 bg-red-200 h-auto flex felx-col">
+    <div className="lg:w-4/5 lg:mx-auto mx-4 rounded-lg my-4 bg-slate-300 h-auto flex felx-col">
         <div className="w-full p-2 sm:flex lg:flex-row">
           <div className=" flex w-3/5">
             <img className="h-13 w-13 p-2" src={fresh2} alt="" />

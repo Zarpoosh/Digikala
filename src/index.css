@@ -29,19 +29,24 @@ i{
   
 /* end of sidebar */
 
-/* #more{
+#more{
   animation:bottom 0.5s ease-in-out ;
 }
 @keyframes bottom {
   0% {
-    margin-bottom: 500px;
+    margin-top: 600px;
   }
   100% {
-    margin-bottom: 300;
+    margin-top: 0;
   }
-} */
+}
 /* carousel */
 ::-webkit-scrollbar{
   display: none;
 }
 /* end of carousel */
+/* hover */
+.RxHamburgerMenu:hover + #drawer-navigation {
+  display: block;
+}
+/* end of hover */

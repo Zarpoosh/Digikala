@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 // images
-import banner from "../image/banner.webp"
+import banner from "../image/banner.webp";
 // icons
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiMilkCarton } from "react-icons/gi";
@@ -14,12 +14,15 @@ import { BsQuestionCircle } from "react-icons/bs";
 import { MdOutlineStorefront } from "react-icons/md";
 import Search from "./Search";
 import Sidebar from "./Sidebar";
+import MegaMenu from "./MegaMenu/MegaMenu";
 
-const Header = () => {
+const Header = (props) => {
   const [showSide, setShowSide] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <>
-    {/* banner */}
+      {/* banner */}
       <div className="w-full cursor-pointer">
         <img src={banner} alt="" />
       </div>
@@ -27,7 +30,7 @@ const Header = () => {
 
       {/* header */}
       <header className="flex lg:w-full bg-white lg:container mx-auto flex-col pb-1 px-4">
-        <Search/>
+        <Search />
         {/* nav */}
         <nav className="w-full relative">
           <div className="w-full flex container-4xl-w mx-auto px-4-md justify-between">
@@ -41,11 +44,17 @@ const Header = () => {
               tabindex="-1"
               aria-labelledby="drawer-navigation-label"
             >
-              
               <div class="py-4 lg:py-0">
-                <ul class="space-y-2 flex flex-col lg:flex-row">
-                  <li className=" py-5 hidden lg:inline">
-                    <a className="flex lg:hover:border-b-2 lg:border-red-600 duration-75 font-bold cursor-pointer mx-1">
+                <ul class="space-y-2 flex lg:flex-row">
+                  <li
+                    className={`py-5 hidden lg:inline ${
+                      !showMenu ? "hidden" : ""
+                    }`}
+                  >
+                    <a
+                      onMouseOver={() => setShowMenu(!showMenu)}
+                      className="bg-blue-200 flex lg:hover:border-b-2 lg:border-red-600 duration-75 font-bold cursor-pointer mx-1"
+                    >
                       <i className="flex mx-1">
                         <RxHamburgerMenu />
                       </i>
@@ -63,7 +72,7 @@ const Header = () => {
                   <li className="text-gray-800 py-3 ">
                     <a className="flex mx-1 cursor-pointer lg:hover:border-b-2 lg:border-red-600 duration-75">
                       <i className="flex mx-1">
-                        <AiOutlineFire className="text-gray-500 h-5 w-5 lg:w-4"/>
+                        <AiOutlineFire className="text-gray-500 h-5 w-5 lg:w-4" />
                       </i>
                       <p className=" mx-1 text-xs lg:xs">پرفروش ترین ها</p>
                     </a>
@@ -71,15 +80,17 @@ const Header = () => {
                   <li className="text-gray-800 py-3 ">
                     <a className="flex mx-1 cursor-pointer lg:hover:border-b-2 lg:border-red-600 duration-75">
                       <i className="flex mx-1">
-                        <MdOutlineDiscount className="text-gray-500 h-5 w-5 lg:w-4"/>
+                        <MdOutlineDiscount className="text-gray-500 h-5 w-5 lg:w-4" />
                       </i>
-                      <p className=" mx-1 text-xs lg:xs">تخفیف ها و پیشنهاد ها</p>
+                      <p className=" mx-1 text-xs lg:xs">
+                        تخفیف ها و پیشنهاد ها
+                      </p>
                     </a>
                   </li>
                   <li className="text-gray-800 py-3 ">
                     <a className="flex mx-1 cursor-pointer lg:hover:border-b-2 lg:border-red-600 duration-75">
                       <i className="flex mx-1">
-                        <CiDiscount1 className="text-gray-500 h-5 w-5 lg:w-4"/>
+                        <CiDiscount1 className="text-gray-500 h-5 w-5 lg:w-4" />
                       </i>
                       <p className="mx-1 text-xs lg:xs">شگفت انگیز ها</p>
                     </a>
@@ -87,7 +98,7 @@ const Header = () => {
                   <li className="text-gray-800 py-3 ">
                     <a className="flex mx-1 cursor-pointer lg:hover:border-b-2 lg:border-red-600 duration-75">
                       <i className="flex mx-1">
-                        <BsQuestionCircle className="text-gray-500 h-5 w-5 lg:w-4"/>
+                        <BsQuestionCircle className="text-gray-500 h-5 w-5 lg:w-4" />
                       </i>
                       <p className="text-xs mx-1">سوالی دارید؟</p>
                     </a>
@@ -95,7 +106,7 @@ const Header = () => {
                   <li className="text-gray-800 py-3 ">
                     <a className="flex mx-1 cursor-pointer lg:hover:border-b-2 lg:border-red-600 duration-75">
                       <i className="flex mx-1">
-                        <MdOutlineStorefront className="text-gray-500 h-5 w-5 lg:w-4"/>
+                        <MdOutlineStorefront className="text-gray-500 h-5 w-5 lg:w-4" />
                       </i>
                       <p className="text-xs mx-1">در دیجی کالا بفروشید!</p>
                     </a>
@@ -109,9 +120,7 @@ const Header = () => {
 
             {/* gps */}
             <div>
-              
-              <Sidebar/>
-              
+              <Sidebar />
             </div>
             <div className="flex justify-between mr-auto">
               <div className="flex flex-nowrap">
@@ -130,6 +139,7 @@ const Header = () => {
         {/* end of nav */}
       </header>
       {/* en dof header */}
+      <MegaMenu setShowMenu={setShowMenu} showMenu={showMenu} />
     </>
   );
 };
