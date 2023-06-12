@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 // images
 import banner from "../image/banner.webp";
+import logo from "../image/logo.svg";
+
 // icons
 import { RxHamburgerMenu } from "react-icons/rx";
 import { GiMilkCarton } from "react-icons/gi";
@@ -29,7 +31,12 @@ const Header = (props) => {
       {/* end of banner */}
 
       {/* header */}
-      <header className="flex lg:w-full bg-white lg:container mx-auto flex-col pb-1 px-4">
+      <header className="flex lg:w-5/5 bg-white lg:container mx-auto flex-col pb-1 px-4">
+        {/* logo */}
+        <a className=" lg:hidden mx-auto my-1" href="#">
+          <img src={logo} alt="" />
+        </a>
+        {/* end of logo */}
         <Search />
         {/* nav */}
         <nav className="w-full relative">
@@ -53,7 +60,7 @@ const Header = (props) => {
                   >
                     <a
                       onMouseOver={() => setShowMenu(!showMenu)}
-                      className="bg-blue-200 flex lg:hover:border-b-2 lg:border-red-600 duration-75 font-bold cursor-pointer mx-1"
+                      className="flex lg:hover:border-b-2 lg:border-red-600 duration-75 font-bold cursor-pointer mx-1"
                     >
                       <i className="flex mx-1">
                         <RxHamburgerMenu />
@@ -122,6 +129,7 @@ const Header = (props) => {
             <div>
               <Sidebar />
             </div>
+
             <div className="flex justify-between mr-auto">
               <div className="flex flex-nowrap">
                 <i className="text-orange-400">

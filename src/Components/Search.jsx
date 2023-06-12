@@ -15,13 +15,13 @@ const Search = () => {
             <div className="w-full flex relative justify-between">
               <div className="flex flex-1 items-center">
                 {/* logo */}
-                <a className='' href="#">
+                <a className='hidden lg:flex' href="#">
                   <img src={logo} alt="" />
                 </a>
                 {/* end of logo */}
                 {/* input */}
                 <div className="ml-auto w-full">
-                  <div className="mr-3 bg-gray-100 w-full md:w-3/5 lg:w-2/5 rounded-lg flex">
+                  <div className="mr-3 bg-gray-100 w-full lg:w-2/5  rounded-lg flex">
                     <i className="p-3 text-gray-400 focus:black">
                       <BiSearch />
                     </i>
@@ -36,13 +36,13 @@ const Search = () => {
               </div>
               {/* login */}
               <div className="flex items-center">
-                <div className="mx-3 ">
+                <div className="mx-1 ">
                   <i className="p-3 flex">
                     <BsPerson className=" h-5 w-5" />
                     <MdOutlineArrowDropDown className=" h-5 w-5" />
                   </i>
                 </div>
-                <div className="mx-3 ">
+                <div className="mx-1 ">
                   <i className="p-3">
                     <BsCart className="h-5 w-5" />
                   </i>

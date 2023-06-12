@@ -28,7 +28,8 @@ const MenuContent = (props) => {
   ];
   return (
     <>
-      <div className="flex flex-col  w-4/5 ">
+    {/* content1 */}
+      <div key={props.items.id} className={` flex flex-col  w-4/5 ${!props.showItem ?"hidden" :""}`}>
         <div className="flex text-xs p-4">
           <p>همه محصولات موبایل</p>
           <i>
@@ -40,9 +41,9 @@ const MenuContent = (props) => {
           <div className="grid grid-cols-3">
             <div className="flex felx-col  p-2">
               <div className="flex flex-col">
-                <div className="flex flex-row items-center hover:text-red-600">
+                <div className="flex flex-row items-center hover:text-red-500">
                   <a className="flex items-center" href="#">
-                    <h1 className="font-bold p-1 border-r-2 border-red-600 ">
+                    <h1 className="font-bold p-1 border-r-2 border-red-500 ">
                       برند های مختلف گوشی
                     </h1>
                     <i>
@@ -52,9 +53,9 @@ const MenuContent = (props) => {
                 </div>
                 {/* riz manu */}
                 {brand.map((name) => (
-                  <div className="flex fle-col p-2 ">
+                  <div className="flex flex-col p-2 ">
                     <a href="#">
-                      <h1 className="text-xs text-gray-500 hover:text-red-600">
+                      <h1 className="text-xs text-gray-500 hover:text-red-500">
                         گوشی {name.name}
                       </h1>
                     </a>
@@ -63,11 +64,11 @@ const MenuContent = (props) => {
                 {/* riz manu */}
               </div>
             </div>
-            <div className="flex felx-col p-2">
+            <div className="flex flex-col p-2">
               <div className="flex flex-col">
-                <div className="flex flex-row items-center hover:text-red-600">
+                <div className="flex flex-row items-center hover:text-red-500">
                   <a className="flex items-center" href="#">
-                    <h1 className="font-bold p-1 border-r-2 border-red-600 ">
+                    <h1 className="font-bold p-1 border-r-2 border-red-500 ">
                       گوشی براساس قیمت
                     </h1>
                     <i>
@@ -79,7 +80,7 @@ const MenuContent = (props) => {
                 {brand.map((name) => (
                   <div className="flex fle-col p-2 ">
                     <a href="#">
-                      <h1 className="text-xs text-gray-500 hover:text-red-600">
+                      <h1 className="text-xs text-gray-500 hover:text-red-500">
                         گوشی {name.name}
                       </h1>
                     </a>
@@ -90,9 +91,9 @@ const MenuContent = (props) => {
             </div>
             <div className="flex felx-col p-2">
               <div className="flex flex-col">
-                <div className="flex flex-row items-center hover:text-red-600">
+                <div className="flex flex-row items-center hover:text-red-500">
                   <a className="flex items-center" href="#">
-                    <h1 className="font-bold p-1 border-r-2 border-red-600 ">
+                    <h1 className="font-bold p-1 border-r-2 border-red-500 ">
                       گوشی براساس حافظه
                     </h1>
                     <i>
@@ -104,7 +105,7 @@ const MenuContent = (props) => {
                 {brand.map((name) => (
                   <div className="flex fle-col p-2 ">
                     <a href="#">
-                      <h1 className="text-xs text-gray-500 hover:text-red-600">
+                      <h1 className="text-xs text-gray-500 hover:text-red-500">
                         گوشی {name.name}
                       </h1>
                     </a>
@@ -116,6 +117,9 @@ const MenuContent = (props) => {
           </div>
         </div>
       </div>
+
+      {/* content2 */}
+      
     </>
   );
 };

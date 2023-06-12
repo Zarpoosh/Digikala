@@ -18,20 +18,19 @@ const Sidebar = () => {
   return (
     <div>
       <button
-        // onMouseOver={() => setShowSide(!showSide)}
         onClick={() => setShowSide(!showSide)}
         class="rounded-lg px-5  mr-2 border-0 focus:border-0 lg:hidden"
         type="button"
       >
         <RxHamburgerMenu />
       </button>
+      
       {/* slidebar */}
       <div onClick={() => setShowSide(!showSide)}
         id="drawer-navigation"
         class={` bg-black/50 h-screen  lg:hidden fixed top-0  right-0  w-full overflow-x-hidden overflow-y-auto md:inset-0  max-h-full ${
           !showSide ? "hidden" : ""
         }`}
-        // onMouseLeave={() => setShowSide(!showSide)}
       ></div>
       <div
         style={{ zIndex: "" }}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Input from "./Input";
-import { MdOutlineKeyboardArrowUp } from "react-icons/md";
 // icons
 import { BsInstagram } from "react-icons/bs";
 import { BsTwitter } from "react-icons/bs";
@@ -8,7 +7,8 @@ import { BsLinkedin } from "react-icons/bs";
 import { BsYoutube } from "react-icons/bs";
 import Install from "./Install";
 
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import BackToTopButton from "./BackToTopButton";
 
 
 const Footer = () => {
@@ -50,13 +50,10 @@ const Footer = () => {
           </div>
 
            
-
-          <button className="p-1 border-gray-400 border rounded-lg text-gray-500 flex flex-row items-center">
-            بازگشت به بالا
-            <i className="">
-              <MdOutlineKeyboardArrowUp className="h-5 w-5" />
-            </i>
-          </button>
+          
+          
+         <BackToTopButton/>
+          
             
         </div>
         {/* end of button & brand */}
