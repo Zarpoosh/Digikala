@@ -2,8 +2,11 @@ import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-
 const Input = () => {
+  // const handleSubmit = (e) => {
+  //   e.prevEvents();
+  //   console.log(event)
+  // };
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -19,7 +22,7 @@ const Input = () => {
   });
   return (
     <>
-      <form className="w-full flex-row  flex my-2">
+      <form onSubmit={formik.handleSubmit} className="w-full flex-row  flex my-2">
         <input
           value={Input}
           placeholder="ایمیل شما"
@@ -29,6 +32,7 @@ const Input = () => {
         />
 
         <button
+          
           id="email"
           type="submit"
           disabled={!Input}
@@ -40,7 +44,6 @@ const Input = () => {
       {formik.touched.email && formik.errors.email ? (
         <p className="text-red-500 mx-3 text-xs my-1">{formik.errors.email}</p>
       ) : null}
-    
     </>
   );
 };

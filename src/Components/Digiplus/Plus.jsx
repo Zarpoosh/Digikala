@@ -7,7 +7,7 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 const Plus = () => {
   return (
     <>
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 lg:w-4/5 lg:mx-auto lg:rounded-xl bg-purple-700">
+      <div className="w-full my-3 grid grid-cols-1 lg:grid-cols-2 lg:w-4/5 lg:mx-auto lg:rounded-xl bg-purple-700">
         {/* title */}
         <div className="flex flex-col p-3 lg:mx-5">
           <div className="my-2">
@@ -18,16 +18,21 @@ const Plus = () => {
               />
             </a>
           </div>
-          <div className="my-2">
-            <p className="text-white text-xs my-2">
-              خدمات ویژه برای اعضای دیجی‌پلاس
-            </p>
-            <button className="p-2 text-white flex flex-row items-center border-white border rounded-lg">
-              عضویت
-              <i>
-                <BsArrowLeftShort className="h-7 w-7" />
-              </i>
-            </button>
+          <div className="my-2 flex flex-row">
+            <div>
+              <p className="text-white text-xs my-2">
+                خدمات ویژه برای اعضای دیجی‌پلاس
+              </p>
+              <button className="p-2 text-white flex flex-row items-center border-white border rounded-lg">
+                عضویت
+                <i>
+                  <BsArrowLeftShort className="h-7 w-7" />
+                </i>
+              </button>
+            </div>
+            <div>
+              <img className=" w-96" src="https://www.digikala.com/statics/img/png/digiplus/plus-widget.png" alt="" />
+            </div>
           </div>
         </div>
         {/* title */}

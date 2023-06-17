@@ -33,13 +33,15 @@ const Header = (props) => {
       {/* header */}
       <header className="flex lg:w-5/5 bg-white lg:container mx-auto flex-col pb-1 px-4">
         {/* logo */}
-        <a className=" lg:hidden mx-auto my-1" href="#">
-          <img src={logo} alt="" />
-        </a>
+        <div className=" border-b lg:border-none p-1 w-full items-center flex">
+          <a className=" lg:hidden mx-auto my-1" href="#">
+            <img className="h-6 mt-2" src={logo} alt="" />
+          </a>
+        </div>
         {/* end of logo */}
         <Search />
         {/* nav */}
-        <nav className="w-full relative">
+        <nav className="w-full relative  pt-1 mt-1">
           <div className="w-full flex container-4xl-w mx-auto px-4-md justify-between">
             {/* menu */}
 
@@ -130,12 +132,13 @@ const Header = (props) => {
               <Sidebar />
             </div>
 
-            <div className="flex justify-between mr-auto">
+            <div className="flex felx-row justify-between mr-auto lg:w-20 my-auto">
               <div className="flex flex-nowrap">
                 <i className="text-orange-400">
                   <HiOutlineLocationMarker />
                 </i>
-                <p className="text-xs">ارسال به اردبیل اردبیل</p>
+                {/* <p className="text-xs">ارسال به اردبیل اردبیل</p> */}
+                <p className="text-xs">انتخاب شهر</p>
               </div>
               <i className="lg:hidden">
                 <MdOutlineKeyboardArrowLeft className="h-5 w-5" />

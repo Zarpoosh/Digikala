@@ -5,7 +5,7 @@ import { HiOutlinePlusSm } from "react-icons/hi";
 const Card = () => {
   return (
     <>
-      <div className="card bg-white w-[200px] h-[300px] rounded-lg shadow-lg m-1">
+      <div className="card bg-white w-[] h-[] rounded-lg shadow-lg m-1">
         <a className="top cursor-pointer">
           <img
             className="w-[150px] h-[150px] object-cover m-5 p-1"

@@ -85,12 +85,12 @@ const More = () => {
       </a>
       {/* end of more */}
       <div
-        className={` bg-black/50 fixed top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full ${
+        className={` bg-black/50 h-screen fixed top-0 left-0 right-0 z-50  w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 max-h-full ${
           !showMore ? "hidden" : ""
         }`}
       >
         <div className="relative w-full max-w-2xl max-h-full mx-auto top-32">
-          <div id="more" className=" relative bg-white rounded-lg shadow ">
+          <div id="more" className="relative bg-white rounded-lg shadow ">
             <div className="flex items-start p-4 border-b ">
               <img src={smile} className="ml-1" alt="" />
               <div className="felx w-full items-center">
