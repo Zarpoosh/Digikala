@@ -52,11 +52,11 @@ const MenuContent = (props) => {
                   </a>
                 </div>
                 {/* riz manu */}
-                {brand.map((name) => (
-                  <div className="flex flex-col p-2 ">
+                {brand.map((card) => (
+                  <div key={card.url} className="flex flex-col p-2 ">
                     <a href="#">
                       <h1 className="text-xs text-gray-500 hover:text-red-500">
-                        گوشی {name.name}
+                        گوشی {card.name}
                       </h1>
                     </a>
                   </div>

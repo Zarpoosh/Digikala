@@ -132,12 +132,12 @@ const More = () => {
                 <p className="text-xs mr-5">سرویس های گروه دیجی کالا</p>
               </div>
               <div className=" w-full lg:w-full lg:grid grid-cols-2 lg:mx-auto lg:justify-between">
-                {imagecards.map((cards) => (
+                {imagecards.map((card) => (
                   <MoreDown
-                    Image={cards.url}
-                    key={cards.id}
-                    desc={cards.desc}
-                    title={cards.title}
+                    Image={card.url}
+                    key={card.url}
+                    desc={card.desc}
+                    title={card.title}
                   />
                 ))}
               </div>

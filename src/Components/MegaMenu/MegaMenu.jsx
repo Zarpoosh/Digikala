@@ -64,9 +64,9 @@ const MegaMenu = (props) => {
           <ul className="h-auto flex flex-col ">
             {listitems.map((items) => (
               <li
+              key={items.url}
               onMouseOver={()=>setShowItem(!showItem)}
                 className=" my-1 p-4 flex flex-row items-center hover:bg-gray-100 hover:text-red-600 text-xs xl:text-sm cursor-pointer"
-                key={items.id}
                 title={items.name}
               >
                 <i className="ml-2">{items.icon}</i>
